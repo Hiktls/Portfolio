@@ -23,7 +23,7 @@ email: kaandev22@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Portfolio of Hiktls, a software engineer and web developer, made using Jekyll.
 baseurl: "/" # the subpath of your site, e.g. /blog
-url: "http://Hiktls.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+url: "https://Hiktls.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  Hiktls
 
 # Build settings
