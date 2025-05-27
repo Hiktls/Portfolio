@@ -1,0 +1,352 @@
+:root {
+    --animationDur: 2s;
+    
+    
+    --darkSecondary: #222831;
+    --darkBackground: #393E46;
+    --darkHighlight: #00ADB5;
+    --darkHighlightSecondary: #EEEEEE;
+
+    --lightBackground:#E3FDFD;
+    --lightSecondary: #71C9CE;
+    --lightHiglight: #A6E3E9;
+    --lightHighlightSecondary: #CBF1F5;
+
+    --headerColorDark: #DAD4B5;
+    --headerColorLight: #355C7D;
+
+    --standardFont: montserrat;
+
+
+    --filterDark: 1;
+    --filterLight: 0;
+    --switchDark:0;
+    --switchLight:1;
+}
+
+
+:root[data-theme="dark"] {
+    --background: var(--darkBackground);
+    --secondary: var(--darkSecondary);
+    --highlight: var(--darkHighlight);
+    --highlight-secondary: var(--darkHighlightSecondary);
+    --headerColor: var(--headerColorDark);
+    --filter: var(--filterDark);
+    --switch: var(--switchDark);
+}
+
+:root[data-theme="light"] {
+    --background: var(--lightBackground);
+    --secondary: var(--lightSecondary);
+    --highlight: var(--lightHiglight);
+    --highlight-secondary: var(--lightHighlightSecondary);
+    --headerColor: var(--headerColorLight);
+    --filterLight: var(--filterLight);
+    --switch: var(--switchLight);
+}
+
+
+
+.montserrat {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+
+
+.modeSwitch {
+    position:absolute;
+    width: 5vh;
+    height: 5vh;
+    bottom: 80vh;
+    left: 180svh;
+    animation: fadeIn var(--animationDur);
+    filter: invert(var(--switch));
+}
+
+
+html{
+    background: var(--background) ;
+}
+body{
+    min-height:100px;
+    overflow-x: hidden; 
+    overflow-y:hidden;
+    position:fixed;
+}
+body h1 {
+    font-family: var(--standardFont);
+    font-size:96px;
+}
+body h3 {
+    font-family:  var(--standardFont);
+    font-size:2.5svh;
+    color: var(--headerColor)
+}
+body p {
+    font-family:  var(--standardFont);
+    font-size:18px;
+}
+
+body h2 {
+    font-family:  var(--standardFont);
+    font-size:3svh;
+    color: var(--highlight);
+}
+
+.info {
+    position: relative;
+    margin-top:12svh;
+    margin-left:5svh;
+    border-radius:27px;
+    background-color: var(--secondary);
+    width:25%;
+    height:80vh;
+    flex: 1px;
+    animation-name:slideIn;
+    animation-duration:var(--animationDur);
+}
+
+.info .pfp {
+    position:relative;
+    border-radius: 50%;
+    background-color:var(--highlight);
+    width:20svh;
+    height: 20svh;
+    top:2vh;
+    left:25%;
+    background-image: url("../images/me.jpeg");
+    background-size: 40vh;
+    background-position: center;
+    background-position-y: 40vh;
+    background-position-x: 33vh;
+}
+
+.pfp img {
+    width:25vh;
+    border-radius: 50%;
+    width:20svh;
+    height: 20svh;
+    object-fit: cover;
+}
+
+
+.info h3{
+    position: relative;
+    top:5vh;
+    left:5svh;
+}
+
+.info p{
+    position: relative;
+    top:7vh;
+    left:5svh;
+    width: 80%;
+    font-size: 2.2svh;
+    color:var(--highlight-secondary);
+}
+
+.info .github {
+    position: relative;
+    top:12svh;
+    left: 3svh;
+    width: 5svh;
+    height: 5svh;
+    border-radius: 10px;
+    filter:invert(var(--filter));
+}
+.info .email {
+    position: relative;
+    top: 12.3vh;
+    filter:invert(var(--filter));
+    left: 3svh;
+    width: 7.5svh;
+    height: 5svh;
+    border-radius: 10px;
+    padding:-20px;
+}
+
+.info h2 {
+    position:relative;
+    left:5svh;
+    top:4svh;
+}
+
+.statue {
+    position: absolute;
+    bottom:20svh;
+    left:39vh;
+    border-radius:27px;
+    height:60vh;
+    width:60vh;
+    flex: 1;
+    z-index:-1;
+    animation: statueSlide var(--animationDur);
+    animation-delay:var(--animationDur);
+    animation-fill-mode: forwards;
+    opacity:0;
+    color:var(--headerColor)
+}
+
+.showcase {
+    position: absolute;
+    display: flex;
+    background-color: var(--highlight-secondary);
+    width:30svh;
+    height: 25svh;
+    bottom:50vh;
+    left:100vh;
+    border-radius: 27px;
+    animation: slideDown var(--animationDur);
+}
+
+.showcase p {
+    padding:2svh;
+    padding-top:3svh;
+    position: relative;
+    flex:1;
+    width:50svh;
+    top:5svh;
+}
+
+.showcase h3 {
+    display:flex;
+    flex:2;
+    color:var(--headerColor);
+    position: absolute;
+    width:55svh;
+    height:5svh;
+    top:0.5svh;
+    left:9svh;
+}
+
+.showcase .bar {
+    position: absolute;
+    width:100%;
+    height:35%;
+    border-radius:25px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    background-color: var(--secondary);
+
+}
+
+
+#particles-js {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.python {
+    left:80svh;
+}
+
+.devops {
+    left: 120svh;
+}
+
+.cybersecurity {
+    left:80svh;
+    top:50svh;
+}
+.cybersecurity h3 {
+    left:2svh;
+}
+
+.cloud {
+    left:120svh;
+    top:50svh;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}   
+
+
+
+@keyframes statueSlide{
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+        opacity:1;
+    } 
+}
+
+@keyframes slideIn{
+    
+    from {
+        transform: translateX(-100%);
+         opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+@keyframes slideDown{
+    
+    from {
+        transform: translateY(-100%);
+         opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+
+@media screen and (max-width:1500px){
+    .info{
+        width:40%;
+        height:80svh;
+    }
+    .info h3{
+        left:4svh;
+    }
+
+}
+@media screen and (max-width: 950px) {
+    .info{
+        width:100%;
+        height:80svh;
+        margin:0vh;
+        overflow-x: hidden;
+    }
+    
+}
+@media screen and (max-width:500px){
+    .info h3{
+        left:3svh;
+    }
+    .info {
+        height:90svh;
+        animation-name: slideDown;
+    }
+    .statue {
+        display:none;
+    }
+    .showcase {
+        display: none;
+    }
+    #particles-js {
+        display: none;
+    }
+}
+
+
+
+
+
