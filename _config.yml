@@ -19,11 +19,11 @@
 # in the templates via {{ site.myvariable }}.
 
 title: About me
-email: your-email@example.com
+email: kaandev22@gmail.com
 description: >- # this means to ignore newlines until "baseurl:"
   Portfolio of Hiktls, a software engineer and web developer, made using Jekyll.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/" # the subpath of your site, e.g. /blog
+url: "http://Hiktls.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  Hiktls
 
 # Build settings
